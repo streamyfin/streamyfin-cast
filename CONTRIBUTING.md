@@ -21,8 +21,9 @@ You need Node 24 (see `.nvmrc`) and npm. Code style is set by editorconfig, pret
 A Cast device only loads a receiver from the address registered for an application ID, over HTTPS. The two
 public addresses serve `main` and the releases, so a change that is not merged yet needs an address of its own.
 
-1. **A test address, in your fork.** Enable GitHub Pages in your fork with the source "GitHub Actions". Every
-   push to a `streamyfin` branch of the fork is tested, built and linted by the `Streamyfin` workflow, then
+1. **A test address, in your fork.** In your fork, turn Actions on, enable GitHub Pages with the source "GitHub
+   Actions" and allow the `streamyfin` branch in the `github-pages` environment. Then push your change to a
+   branch named `streamyfin`: every push to it is tested, built and linted by the `Streamyfin` workflow, then
    deployed to the Pages address of the fork. The workflow can also be started by hand to deploy any branch,
    tag or commit, which is how an earlier build is put back. It never deploys in this repository. A build
    reports the first seven characters of its commit as its version, so the Jellyfin server shows which build a
